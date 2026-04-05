@@ -6,7 +6,7 @@ hello, world!
 [Project Entry](projectentry.md)
 [Reflection](reflection.md)
 <p> Some text
-<a href="aboutme.html"> About Me</a>
+<a href="aboutme2.html"> About Me</a>
 Some more text</p>
 [Project Entry](projectentry.md)
 [Reflection](reflection.md)
