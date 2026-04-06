@@ -4,26 +4,92 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="styles.css">
 		<title>Jasper Palmer</title>
-		<h1>Capstone Project Reflection</h1>
+		<h1>Capstone Project Entry</h1>
 		<!--<p align="center"><a href="projectentry.html">Capstone Project</a>    <a href="reflection.html">Reflection</a></p>-->
-		<a href="projectentry.md" class="button">Capstone Project</a><a href="./" class="button">Home</a>
+		<a href="index.html" class="button">Home</a><a href="reflection.html" class="button">Capstone Reflection</a>
+		<!-- can link to home page with href="/"-->
 	</head>
 	<body>
-		<p>hello, world!</p>
-	<!--
-<br>
-<p style="text-align:center;"><em>This</em> <strong>is</strong> <mark>some</mark> <b>red</b> <i>text</i>. <sub>With</sub> <small>quite</small> a <del>lot</del> <ins>of</ins> <sup>formatting</sup>. </p>
+<p>Our capstone project focused on designing a modular hydrogen tank cradle for the Green Goat switching locomotive, intended to safely store compressed hydrogen under severe railway operating conditions while fitting inside a highly constrained retrofit envelope. The cradle had to satisfy four competing objectives simultaneously: withstand dynamic rail loads up to 7g, accommodate tank expansion during refueling, remain maintainable for field servicing, and stay within the client’s allowable budget of $100,000 + 25% flexibility. The available installation space inside the locomotive was limited to approximately 1200 mm height, 1866 mm width, and 3364 mm length, making geometric efficiency the dominant design constraint.</p>
 
-<br>
-<p><q> Hello</q></p>
-<p> An <abbr title="Automated Teller Machine">ATM</abbr> is an abbreviation</p>
-<div style="background-color:rgb(255,99,71);">
-	<p>Hello</p>
-</div>
--->
-</body>
+<figure>
+    <img src="./files/greengoat.png" alt="Green Goat locomotive" width="600">
+    <figcaption align="center">The Green Goat switching locomotive.</figcaption>
+</figure>
+
+<p>Our complete design report is available below for download <a href="files/designreport.pdf" download="designreport.pdf">here</a> if desired.</p>
+
+<h2>Objectives</h2>
+
+<p>My personal objectives for my Capstone project were:</p>
+<p>1. Apply engineering processes and knowledge to a project.</p>
+<p>2. Judge how interesting working in the railway industry would be.</p>
+<p>3. Make contacts with both railway and non-railway engineering industry insiders.</p>
+<p>4. Learn how to solve problems outside of the scope of a course with easily available relevant information, instead learning about project-specific information with external resources.</p>
+
+<h2>Processes</h2>
+
+<p>Our project process was rather iterative, however it can be boiled down into the following steps:</p>
+<p align="center"><img src="./files/flowchart.png" alt="Design Process Flowchart" width="600"></p>
+
+<p>First, we needed to define our problem, which is absolutely critical to the project success. Without a well-defined problem, the client can be unsatisfied with our design and ultimately be worse off compared to where they were initially, either financially and/or time-wise. After an initial meeting to clarify the project description of the capstone proposal and identifying stakeholders in our project, we realized that we would need to build a space and cost effective solution to containing hydrogen tanks. Having defined this, we needed to formulate design specifications.</p>
+
+<h3>Design Specifications</h3>
+
+<p>After brainstorming relevant criteria and discussing with the client, we realized that our design had lots of aspects which were more of a preference rather than required performance necessities. Because of this, we decided to classify our design specifications into wants and needs. This distinction allowed us to focus our design on aspects which were more critical to the performance. As seen in the flowchart above, the primary required design specifications included load requirements, hydrogen capacity requirements, and operating conditions. Whereas our primary desired design specifications included modularity, maintainability, and operational aids. A complete list of design specifications, their classifications, and associated measurement criteria may be found in our final report.</p>
+
+<h3>Tank Selection</h3>
+<p>Tank selection became the most influential design decision because hydrogen tanks represented nearly 90% of total project cost and dictated the entire cradle geometry. We initially evaluated 12 commercial tanks using a <abbr title="Multiple Criteria Decision Analysis">MCDA</abbr> method (which is described in detail in our final report), weighting cost twice as heavily as weight because tank pricing dominated total project economics. However, dimensional constraints eliminated most options immediately, since only tanks fitting within the locomotive envelope and available with quoted supplier pricing could remain viable. The tanks we considered,'alternatives' may be seen below.</p>
+<figure>
+    <img src="./files/DM.png" alt="Decision matrix" width="500">
+    <figcaption align="center">Decision matrix constructed from tank information collected.</figcaption>
+</figure>
+<p>Although both Type III and Type IV tanks were considered, the final selection was an 8-tank Type IV Hexagon Purus configuration, chosen because it was the only commercially quoted option that satisfied both capacity and geometric requirements.</p>
+
+
+
+<h3>Tank Mounting</h3>
+
+<p>Mounting hydrogen tanks to a fixed point is quite difficult, as hydrogen tanks are prone to expanding and contracting, both length-wise and radially, as they are refilled and emptied. This limits the available mounting options to those which have already been well defined by the market, either a single rigid 'neck mount' which contrained the tank at one end, or multiple radially-flexible hoop-and-saddle mounts. The saddle mounts were utilized as they could meet the massive load requirements of the cradle and only came with minor drawbacks in the form of needing replacement as they aged.</p>
+<figure>
+    <img src="./files/mounts.png" alt="Different tank mounting methods" width="500">
+    <figcaption align="center">Saddle mounts (left) and neck mounts (right)</figcaption>
+</figure>
+
+<h3>Cradle Design</h3>
+
+<p>As our tank selection, tank mounting, and tank packing ideas evolved, so did our cradle design.</p>
+
+<h4>Design Iteration 1</h4>
+
+<p>Our first design maximized the modularity design criteria, and included a suspension system which was designed to prevent the immense loads required from rupturing the tanks. For this preliminary design, the tanks were considered to be generalized hydrogen tanks in a 2x2 configuration. This made the assembly very large, significantly outside of the space available for the design.</p>
+<figure>
+    <img src="./files/iter1.png" alt="First cradle iteration" width="500">
+    <figcaption align="center">First cradle iteration</figcaption>
+</figure>
+
+<h4>Design Iteration 2</h4>
+
+<p> <img src="./files/fem_tanks.png" alt="Tank FEM Analysis" style="float:right;width:400px"> After selecting our tank, a FEM analysis was performed on the hydrogen tanks, considering only the rigid carbon fiber wrap as load bearing in order to assess whether the tank structure would be susceptible to damage. The tanks were subjected to 7g lateral and longitudinal loads emminating from 2 mounts, utilizing a fine mesh and estimated full tank weights. Resulting from this, we found that the tanks would have very high safety factors, and thus we decided to remove the suspension system from our design. This significantly reduced the design cost, complexity, and space required.</p>
+<p>Another focus of this design was to reduce the size and increase maintainability by reducing the level of modularity of our design. Previously, each tank had its own containing frame, each of which were bolted together to form the entire assembly. With this update, the collection of 8 required tanks was taken as one module, which better fit the purpose of the modularity desired from the project. This is because the idea of the cradle was to be able to stack multiple of them vertically in order to install them inside conventional locomotives during retrofits which featured significantly higher hoods than in the switching locomotive we were designing for.</p>
+<figure>
+    <img src="./files/iter2.png" alt="Second cradle iteration" width="500">
+    <figcaption align="center">Second cradle iteration</figcaption>
+</figure>
+
+<h4>Design Iteration 3</h4>
+<p> While we significantly improved the height of the cradle in the second design iteration, we were still significantly outside of our desired height specification. In order to address this, the packing of the cylinders was significantly improved at the expense of modularity. A major late-stage design decision involved rejecting standard structural steels such as A36 and A992 because of hydrogen embrittlement risk. Although 316 stainless steel nearly doubled frame cost compared to 304 stainless, it was selected because its FCC crystal structure provides significantly greater hydrogen resistance and supports the 10-year durability target. Our client was happy with these improvements, despite the cost increase.</p>
+<figure>
+    <img src="./files/cradle.png" alt="Final cradle design" width="500">
+    <figcaption align="center">Final cradle design</figcaption>
+</figure>
+<h2>Outcomes</h2>
+
+<p>With our final design, we minimized the space utilized, ensured that the system could withstand the extreme loads prescribed, and be operationally helpful featuring leak sensors and force sensors to alert monitoring programs of damage, and being very maintainable considering the practicalities of the project. While we met most of our design specifications, we came short on several. In particular, one goal of our design was to make the entire modular assembly less than 1.25m tall while containing the 60kg of hydrogen. We found that this would not be possible with the tank selection we had. Because of this, this cradle became more tailored specifically to this application rather than being a one-size fits all solution to larger locomotives. While it is possible to mount them in a modular way, it would require the removal of the top layer of tanks, significantly reducing the storage capacity. Additionally, while the projected cost was within the clients budget, there was significant room for improvement if we would have been able to determine the costs of more tanks. Other tanks would also be able to significantly reduce the size of the cradle. Ultimately it was recommended for future improvement that the client consider having customized tanks manufactured for their application.</p>
+	</body>
 	<footer>
-		<p align="center"> Check out my LinkedIn <a href="https://linkedin.com/in/jasper-palmer/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/250px-LinkedIn-logo_initials.png" alt="LinkedIn Logo" width="15"></a></p>
+		<p align="center" style="margin:10px auto 0px auto"> Check out my LinkedIn <a href="https://linkedin.com/in/jasper-palmer/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/250px-LinkedIn-logo_initials.png" alt="LinkedIn Logo" width="15"></a></p>
+		<p align="center" style="font-size:0.8rem; margin:0px auto 0px auto">This website was coded in HTML and CSS by hand! © Jasper Palmer, 2026</p>
 	</footer>
 </html>
 
