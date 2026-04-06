@@ -1,0 +1,44 @@
+@font-face{
+	font-family:"Cocogoose";
+	src:url("fonts/cocogoose/Cocogoose-Pro-Regular-trial.ttf") format("truetype");
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+	max-width: none;
+}
+
+body {
+	font-family: Helvetica;
+	margin: 0 auto;
+	padding: 25px 50px;
+	max-width: 90%;
+	line-height: 1.6;
+	font-size:1rem;
+	align: center;
+}
+@media (min-width: 768px){
+	body{
+		max-width: 720px;
+		/* font-size: 1.1rem; */
+	}
+}
+@media (min-width:1200px){
+	body{
+	max-width: 75ch;
+	/* font-size:1.2rem; */
+	}
+}
+h1 {
+	color: #0068de;
+	font-family: "Cocogoose";
+	font-size: 30px;
+}
+p {
+	/* color:red; */
+}
+a {
+	color: #4a8ad4
+}
+
